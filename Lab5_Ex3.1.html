@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infographic và Video YouTube</title>
+  <style>
+    :root{--blue:#2a6df4;--bg:#f7f8fb}
+    body{font-family:Segoe UI, Roboto, Arial, sans-serif;margin:0;background:var(--bg);color:#0b1220}
+    .container{max-width:1000px;margin:32px auto;padding:16px;background:#fff;border-radius:10px;box-shadow:0 6px 18px rgba(12,24,56,.08)}
+    header{display:flex;align-items:center;gap:16px}
+  header h1{font-size:1.6rem;margin:0}
+  .lead{margin-top:12px;color:#334155;line-height:1.6}
+  .infographic{display:block;max-width:900px;width:100%;height:auto;border-radius:8px;margin:18px auto}
+    .video-row{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
+    .video-col{flex:1 1 360px;min-width:300px}
+    .video-card{background:linear-gradient(180deg, #fff 0,#fbfdff 100%);padding:12px;border-radius:8px;border:1px solid #eef2ff}
+  .video-card iframe{width:100%;height:calc(100% * 9 / 16);min-height:200px;border-radius:6px;border:0}
+  /* Thumbnail fallback styling */
+  .video-thumb{display:block;position:relative;width:100%;padding-top:56.25%;border-radius:6px;overflow:hidden;text-decoration:none;background:#000;color:inherit}
+  .video-thumb img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+  .video-thumb .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;background:rgba(0,0,0,.6);border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .video-thumb .play svg{width:36px;height:36px;fill:#fff;margin-left:4px}
+    .video-actions{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:8px 12px;border-radius:6px;text-decoration:none;color:#fff;background:var(--blue);font-weight:600}
+    .muted{color:#6b7280;font-size:.95rem}
+    footer{margin-top:18px;padding-top:12px;border-top:1px solid #eff2ff;color:#6b7280;font-size:.9rem}
+    @media (max-width:640px){header h1{font-size:1.2rem}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <path d="M12 2v20M2 12h20" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1>Lợi ích của công nghệ số — Infographic & Video</h1>
+    </header>
+
+    <p class="lead">Công nghệ số mang lại nhiều lợi ích trong học tập, giúp người học tiếp cận kiến thức một cách nhanh chóng và linh hoạt. Nhờ các nền tảng học trực tuyến và tài nguyên số, việc học không còn bị giới hạn bởi không gian và thời gian. Bên cạnh đó, công nghệ số còn tăng tính tương tác và hỗ trợ người học nâng cao hiệu quả tự học.</p>
+
+  <!-- Infographic: use a relative path so the image loads when hosted (e.g., on GitHub Pages). Place Lab05_Ex2.1.png next to this HTML file. -->
+  <img class="infographic" src="Lab05_Ex2.1.png" alt="Infographic: Lợi ích của công nghệ số (Lab05_Ex2.1.png)" />
+
+    <div class="video-row">
+      <div class="video-col">
+        <div class="video-card">
+          <h2 style="margin:0 0 8px 0;">Video liên quan</h2>
+          <!-- Clickable thumbnail (opens YouTube in a new tab) -->
+          <a class="video-thumb" href="https://youtu.be/rDtlu-0gs78" target="_blank" rel="noopener noreferrer" title="Mở video trên YouTube">
+            <img src="https://img.youtube.com/vi/rDtlu-0gs78/hqdefault.jpg" alt="Thumbnail video" />
+            <span class="play" aria-hidden>
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+            </span>
+          </a>
+
+          <div class="video-actions">
+            <!-- Direct link to YouTube (opens in new tab) -->
+            <a class="btn" href="https://youtu.be/rDtlu-0gs78" target="_blank" rel="noopener noreferrer">Mở trên YouTube</a>
+            <!-- If user prefers to open the video in a new window or copy the link -->
+            <a class="muted" href="https://youtu.be/rDtlu-0gs78" target="_blank" rel="noopener noreferrer">https://youtu.be/rDtlu-0gs78</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Removed: fallback video card as requested -->
+    </div>
+
+    <footer>
+      HTML hiển thị infographic và video, sử dụng GitHub Copilot.
+    </footer>
+  </div>
+
+  <!-- Removed iframe fallback script as the fallback UI was removed -->
+
+</body>
+</html>
