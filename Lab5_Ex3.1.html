@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Infographic và Video YouTube</title>
+  <title>Trang Giới Thiệu Cá Nhân - Nguyễn Hoàng Tuấn</title>
   <style>
     :root{--blue:#2a6df4;--bg:#f7f8fb}
     body{font-family:Segoe UI, Roboto, Arial, sans-serif;margin:0;background:var(--bg);color:#0b1220}
@@ -11,6 +11,19 @@
     header{display:flex;align-items:center;gap:16px}
   header h1{font-size:1.6rem;margin:0}
   .lead{margin-top:12px;color:#334155;line-height:1.6}
+  .profile-section{margin:20px 0;padding:20px;background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);border-radius:10px;color:#fff}
+  .profile-info{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+  .profile-avatar{width:100px;height:100px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:var(--blue);font-weight:bold;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+  .profile-details h2{margin:0 0 8px 0;font-size:1.8rem}
+  .profile-details p{margin:4px 0;opacity:0.95}
+  .products-section{margin:30px 0}
+  .products-section h2{font-size:1.5rem;color:#1e293b;margin-bottom:20px;border-left:4px solid var(--blue);padding-left:12px}
+  .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:20px}
+  .product-card{background:linear-gradient(180deg, #fff 0,#fbfdff 100%);padding:16px;border-radius:10px;border:1px solid #eef2ff;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}
+  .product-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+  .product-card h3{margin:0 0 12px 0;font-size:1.2rem;color:#1e293b}
+  .product-card .product-icon{font-size:3rem;margin-bottom:10px}
+  .product-preview{width:100%;max-height:200px;object-fit:cover;border-radius:6px;margin-bottom:10px}
   .infographic{display:block;max-width:900px;width:100%;height:auto;border-radius:8px;margin:18px auto}
     .video-row{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
     .video-col{flex:1 1 360px;min-width:300px}
@@ -34,41 +47,73 @@
       <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
         <path d="M12 2v20M2 12h20" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <h1>Lợi ích của công nghệ số — Infographic & Video</h1>
+      <h1>Trang Giới Thiệu Cá Nhân</h1>
     </header>
 
-    <p class="lead">Công nghệ số mang lại nhiều lợi ích trong học tập, giúp người học tiếp cận kiến thức một cách nhanh chóng và linh hoạt. Nhờ các nền tảng học trực tuyến và tài nguyên số, việc học không còn bị giới hạn bởi không gian và thời gian. Bên cạnh đó, công nghệ số còn tăng tính tương tác và hỗ trợ người học nâng cao hiệu quả tự học.</p>
+    <!-- Personal Information Section -->
+    <div class="profile-section">
+      <div class="profile-info">
+        <div class="profile-avatar">NHT</div>
+        <div class="profile-details">
+          <h2>Nguyễn Hoàng Tuấn</h2>
+          <p>📚 Mã số sinh viên: B2509859</p>
+          <p>🎓 Lớp: M05</p>
+          <p>📖 Môn học: CT005H - Lab05</p>
+          <p>💻 Chuyên ngành: Công nghệ Thông tin</p>
+        </div>
+      </div>
+    </div>
 
-  <!-- Infographic: use a relative path so the image loads when hosted (e.g., on GitHub Pages). Place Lab05_Ex2.1.png next to this HTML file. -->
-  <img class="infographic" src="Lab05_Ex2.1.png" alt="Infographic: Lợi ích của công nghệ số (Lab05_Ex2.1.png)" />
+    <p class="lead">Chào mừng đến với trang giới thiệu cá nhân của tôi. Đây là nơi tôi chia sẻ các sản phẩm và dự án đã hoàn thành trong quá trình học tập. Công nghệ số mang lại nhiều lợi ích trong học tập, giúp người học tiếp cận kiến thức một cách nhanh chóng và linh hoạt.</p>
 
-    <div class="video-row">
-      <div class="video-col">
-        <div class="video-card">
-          <h2 style="margin:0 0 8px 0;">Video liên quan</h2>
-          <!-- Clickable thumbnail (opens YouTube in a new tab) -->
+    <!-- Products Section -->
+    <div class="products-section">
+      <h2>🎯 Các Sản Phẩm Của Tôi</h2>
+      
+      <div class="product-grid">
+        <!-- Product 1: PDF Document -->
+        <div class="product-card">
+          <div class="product-icon">📄</div>
+          <h3>Tài Liệu PDF - Bài Tập 1.2</h3>
+          <p class="muted">File PDF chứa nội dung bài tập Lab05_Ex1.2</p>
+          <div class="video-actions">
+            <a class="btn" href="Lab05_Ex1.2.pdf" target="_blank" rel="noopener noreferrer">Xem PDF</a>
+            <a class="btn" href="Lab05_Ex1.2.pdf" download style="background:#059669">Tải xuống</a>
+          </div>
+        </div>
+
+        <!-- Product 2: PNG Infographic -->
+        <div class="product-card">
+          <div class="product-icon">🖼️</div>
+          <h3>Infographic PNG - Bài Tập 2.1</h3>
+          <img class="product-preview" src="Lab05_Ex2.1.png" alt="Infographic Preview" />
+          <p class="muted">Infographic về lợi ích của công nghệ số</p>
+          <div class="video-actions">
+            <a class="btn" href="Lab05_Ex2.1.png" target="_blank" rel="noopener noreferrer">Xem ảnh</a>
+            <a class="btn" href="Lab05_Ex2.1.png" download style="background:#059669">Tải xuống</a>
+          </div>
+        </div>
+
+        <!-- Product 3: YouTube Video -->
+        <div class="product-card">
+          <div class="product-icon">🎥</div>
+          <h3>Video YouTube</h3>
           <a class="video-thumb" href="https://youtu.be/rDtlu-0gs78" target="_blank" rel="noopener noreferrer" title="Mở video trên YouTube">
             <img src="https://img.youtube.com/vi/rDtlu-0gs78/hqdefault.jpg" alt="Thumbnail video" />
             <span class="play" aria-hidden>
               <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
             </span>
           </a>
-
+          <p class="muted">Video về công nghệ số trong giáo dục</p>
           <div class="video-actions">
-            <!-- Direct link to YouTube (opens in new tab) -->
-            <a class="btn" href="https://youtu.be/rDtlu-0gs78" target="_blank" rel="noopener noreferrer">Mở trên YouTube</a>
-            <!-- If user prefers to open the video in a new window or copy the link -->
-            <a class="muted" href="https://youtu.be/rDtlu-0gs78" target="_blank" rel="noopener noreferrer">https://youtu.be/rDtlu-0gs78</a>
+            <a class="btn" href="https://youtu.be/rDtlu-0gs78" target="_blank" rel="noopener noreferrer">Xem trên YouTube</a>
           </div>
-
         </div>
       </div>
-
-      <!-- Removed: fallback video card as requested -->
     </div>
 
     <footer>
-      HTML hiển thị infographic và video, sử dụng GitHub Copilot.
+      Trang giới thiệu cá nhân và sản phẩm, được tạo bởi GitHub Copilot - Nguyễn Hoàng Tuấn (B2509859).
     </footer>
   </div>
 
